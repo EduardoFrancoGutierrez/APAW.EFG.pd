@@ -20,6 +20,8 @@ public abstract class Expresion {
     public void setValor(Integer valor) {
         this.valor = valor;
     }
+    @Override
+    public abstract String toString() ;
     
     
 

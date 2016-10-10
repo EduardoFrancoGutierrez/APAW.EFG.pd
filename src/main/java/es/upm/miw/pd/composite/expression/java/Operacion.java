@@ -17,6 +17,12 @@ public abstract class Operacion extends Expresion {
     public void setOperacion(java.util.List<Expresion> operacion) {
         this.operacion = operacion;
     }
-	
+    
+    
+    public String toString() {
+        return "("+this.operacion.get(0).toString() +this.toStringOp()+this.operacion.get(1).toString() +")";
+    }
+  
+    public abstract String toStringOp();
 	
 }

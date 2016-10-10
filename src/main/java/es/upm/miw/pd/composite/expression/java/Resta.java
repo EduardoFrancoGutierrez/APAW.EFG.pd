@@ -11,4 +11,10 @@ public class Resta extends Operacion {
         return  this.getOperacion().get(0).operar() - this.getOperacion().get(1).operar();
     }
 
+    @Override
+    public String toStringOp() {
+        // TODO Auto-generated method stub
+        return "-";
+    }
+
 }
