@@ -11,15 +11,6 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    @Override
-    public double area() {
-        return Math.PI * radius * radius;
-    }
-
-    @Override
-    public double numberOfSides() {
-        return Double.POSITIVE_INFINITY;
-    }
 
 	public double getRadius() {
 		return radius;
@@ -28,6 +19,12 @@ public class Circle extends Figure {
 	public void setRadius(double radius) {
 		this.radius = radius;
 	}
+
+    @Override
+    public void accept(Visitor v) {
+        v.visitCircle(this);
+        
+    }
 
 
 }

@@ -9,15 +9,6 @@ public class Square extends Figure {
         this.side = side;
     }
 
-    @Override
-    public double area() {
-        return side * side;
-    }
-
-    @Override
-    public double numberOfSides() {
-        return 4;
-    }
 
     @Override
     public String toString() {
@@ -30,6 +21,12 @@ public class Square extends Figure {
 
     public void setSide(double side) {
         this.side = side;
+    }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visitSquare(this);
+        
     }
 
 }
